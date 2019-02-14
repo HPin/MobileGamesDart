@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+guid: 61df99290af034bd0a31b4396fea3257
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - dartSound: {fileID: 8300000, guid: fa5763cea42314c19a8c99a520844ce2, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c0bfe5dfc24964b7ea36fb9f193d59e9
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - player1ScoreLabel: {instanceID: 0}
+  - player2ScoreLabel: {instanceID: 0}
+  - infoLabel: {instanceID: 0}
+  - dartPrefab: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
