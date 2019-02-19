@@ -21,6 +21,7 @@
 
 ## Tasks
 * Harald Pinsker
+
 ** AR:
 *** AR Scene Setup
 *** 3D Modeling in Blender
