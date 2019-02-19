@@ -9,6 +9,14 @@ using TMPro;
  */
 public class GameOverMenu : MonoBehaviour
 {
+
+    public TextMeshProUGUI winnerIndicatorLabel;
+
+    void Update()
+    {
+        this.winnerIndicatorLabel.text = PlayerPrefs.GetString("Winner", "Game Over");
+    }
+
     public void GoBackToMainMenu()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 2);

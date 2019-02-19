@@ -50,7 +50,7 @@ public class GameManager : MonoBehaviour {
     public TextMeshProUGUI playerChangeIndicatorLabel;
 
     // Score:
-    public int pointsPerLeg;    // the start amount of points (e.g. 501)
+    private int pointsPerLeg;    // the start amount of points (e.g. 501)
     int player1Score;    // score of player 1
     int player1ScoreBeforeRound;    // score of player 1
     int player2Score;    // score of player 2
@@ -65,7 +65,7 @@ public class GameManager : MonoBehaviour {
     State tempState;    // only used for testing!
 
     // bool flags:
-    public bool useDoubleOut;   // if true players can only finish legs on a double field
+    private bool useDoubleOut;   // if true players can only finish legs on a double field
     bool isPlayer1 = true;   // true if it is player1's turn, false if player2 throws
     private bool showScoreIndicator = true;    // true if current score should get displayed
     private bool showPlayerChangeScreen = false;  
@@ -115,7 +115,20 @@ public class GameManager : MonoBehaviour {
         currentState = state;
         previousState = state;
         progress = 0;
-        
+
+        // fetch starting point amount from player prefs
+        this.pointsPerLeg = PlayerPrefs.GetInt("StartPoints", 501);
+
+        int useDoubleOutIntValue = PlayerPrefs.GetInt("UseDoubleOut", 1);
+        Debug.Log(useDoubleOutIntValue);
+        if (useDoubleOutIntValue == 1)
+        {
+            this.useDoubleOut = true;
+        } else
+        {
+            this.useDoubleOut = false;
+        }
+
         this.player1Score = this.pointsPerLeg;
         this.player1ScoreBeforeRound = this.pointsPerLeg;
         this.player2Score = this.pointsPerLeg;    
@@ -168,9 +181,12 @@ public class GameManager : MonoBehaviour {
         {
             if (state == State.THROWINGSTATE && progress == 0)
             {
+                // Debug.Log("throwingstate entered");
 
                 this.infoLabel.text = "Swipe to throw.";
-                // Debug.Log("throwingstate entered");
+
+                this.playerChangeIndicatorLabel.enabled = false;    // make sure to dismiss player info label
+                
                 ThrowDart();
             }
             else if (state == State.CLOSECAMERASTATE && progress == 0)
@@ -335,7 +351,6 @@ public class GameManager : MonoBehaviour {
     // and returns the achieved score
     public void DecodeScore(Vector3 pos)
     {
-
         Score score = new Score();
         score.Number = -1;
 
@@ -609,6 +624,7 @@ public class GameManager : MonoBehaviour {
                 } else
                 {
                     this.infoLabel.text = "Player 1 won the match!";
+                    PlayerPrefs.SetString("Winner", "Player 1 won!");   // store winner in player prefs
                     SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);   // load game over scene
                     return;
                 }
@@ -635,6 +651,7 @@ public class GameManager : MonoBehaviour {
                 else
                 {
                     this.infoLabel.text = "Player 2 won the match!";
+                    PlayerPrefs.SetString("Winner", "Player 2 won!");   // store winner in player prefs
                     SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);   // load game over scene
                     return;
                 }
@@ -761,7 +778,6 @@ public class GameManager : MonoBehaviour {
 
     private void ThrowDart()
     {
-
         Touch touch = Input.GetTouch(0);
 
         switch (touch.phase)
