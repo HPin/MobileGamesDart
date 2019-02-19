@@ -1,9 +1,9 @@
 <img src="Presentation/Screenshots/graphic.jpg"/>
 
-# UnityDartGame
+# Darts 180
 
 <a href="https://play.google.com/store/apps/details?id=com.hpdk.darts">
-  <img border="0" alt="PlayStore" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Get_it_on_Google_play.svg/1280px-Get_it_on_Google_play.svg.png" width="300">
+  <img border="0" alt="PlayStore" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Get_it_on_Google_play.svg/1280px-Get_it_on_Google_play.svg.png" width="200">
 </a>
 
 ## Notes
