@@ -6,13 +6,12 @@
 
 ## Notes
 * Game was tested on:
-** iPhone SE
-** Samsung Galaxy S6
-** Samsung Galaxy Tab S2
-** Samsung Galaxy Tab S
-** Huawei P10 Lite
-** Windows 10 (Laptop with Touchscreen)
-
+  * iPhone SE
+  * Samsung Galaxy S6
+  * Samsung Galaxy Tab S2
+  * Samsung Galaxy Tab S
+  * Huawei P10 Lite
+  * Windows 10 (Laptop with Touchscreen)
 * The game relies on touch gestures, therefore it cannot be played in the Unity editor (unless you have a touchscreen).
 
 ## Members
@@ -21,25 +20,24 @@
 
 ## Tasks
 * Harald Pinsker
-
-** AR:
-*** AR Scene Setup
-*** 3D Modeling in Blender
-*** Game Logic
-*** Sample Game Implementations
-** Darts 180:
-*** Game Logic
-*** UI and Menus
-*** Score Detection
+  * AR:
+    * AR Scene Setup
+    * 3D Modeling in Blender
+    * Game Logic
+    * Sample Game Implementations
+  * Darts 180:
+    * Game Logic
+    * UI and Menus
+    * Score Detection
 
 * David Krög
-** AR:
-*** Networking
-*** Creation of a sample shooter game in Unity with online networking
-*** Tests with Vuforia
-** Darts 180:
-*** Physics
-*** Collision Detection and Bodies
+  * AR:
+    * Networking
+    * Creation of a sample shooter game in Unity with online networking
+    * Tests with Vuforia
+  * Darts 180:
+    * Physics
+    * Collision Detection and Bodies
 
 ## Files
 * [Presentation](Presentation/projectpresentation.pptx)
